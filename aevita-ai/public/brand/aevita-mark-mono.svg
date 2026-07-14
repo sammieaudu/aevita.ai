@@ -1,0 +1,6 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Aevita mark">
+  <path d="M12 53 L29.5 16" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+  <path d="M34.5 16 L52 53" stroke="currentColor" stroke-width="6" stroke-linecap="round" />
+  <path d="M23 40 H41" stroke="currentColor" stroke-width="5" stroke-linecap="round" />
+  <circle cx="32" cy="9" r="4.5" fill="currentColor" />
+</svg>
