@@ -181,13 +181,13 @@ export function SolutionsGrid() {
                             <div className="w-9 h-9 rounded-lg bg-[rgb(var(--primary))]/10 flex items-center justify-center mb-3">
                                 <solution.icon className="w-[18px] h-[18px] text-[rgb(var(--primary))]" aria-hidden="true" />
                             </div>
-                            <h3 className="font-medium text-sm text-[rgb(var(--foreground))] mb-1.5 leading-snug">
+                            <h3 className="font-medium text-base text-[rgb(var(--foreground))] mb-1.5 leading-snug">
                                 {solution.title}
                             </h3>
-                            <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed mb-3">
+                            <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed mb-3">
                                 {solution.description}
                             </p>
-                            <span className="mt-auto inline-flex items-center gap-1 text-xs text-[rgb(var(--primary))]">
+                            <span className="mt-auto inline-flex items-center gap-1 text-sm text-[rgb(var(--primary))]">
                                 Explore this solution
                                 <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                             </span>
@@ -262,10 +262,10 @@ export function Process() {
                             <p className="text-xs font-mono text-[rgb(var(--primary))] mb-3">
                                 Step {item.step}
                             </p>
-                            <h3 className="font-semibold text-sm text-[rgb(var(--foreground))] mb-2">
+                            <h3 className="font-semibold text-base text-[rgb(var(--foreground))] mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed">
+                            <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed">
                                 {item.description}
                             </p>
                             {index < processSteps.length - 1 && (
@@ -322,10 +322,10 @@ export function Capabilities() {
                             className="p-5 rounded-xl bg-[rgb(var(--background-secondary))]/60 border border-[rgb(var(--border))]/50 hover:border-[rgb(var(--primary))]/30 transition-colors"
                         >
                             <capability.icon className="w-5 h-5 text-[rgb(var(--primary))] mb-3" aria-hidden="true" />
-                            <h3 className="font-medium text-sm text-[rgb(var(--foreground))] mb-1.5">
+                            <h3 className="font-medium text-base text-[rgb(var(--foreground))] mb-1.5">
                                 {capability.title}
                             </h3>
-                            <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed">
+                            <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed">
                                 {capability.description}
                             </p>
                         </div>
@@ -617,10 +617,10 @@ export function SecurityGovernance() {
                             className="p-5 rounded-xl bg-[rgb(var(--background-secondary))]/60 border border-[rgb(var(--border))]/50"
                         >
                             <point.icon className="w-5 h-5 text-[rgb(var(--accent-cyan))] mb-3" aria-hidden="true" />
-                            <h3 className="font-medium text-sm text-[rgb(var(--foreground))] mb-1.5">
+                            <h3 className="font-medium text-base text-[rgb(var(--foreground))] mb-1.5">
                                 {point.title}
                             </h3>
-                            <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed">
+                            <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed">
                                 {point.description}
                             </p>
                         </div>

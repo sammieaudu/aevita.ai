@@ -79,7 +79,7 @@ export function FaqsSection({
                         key={item.id}
                         className="relative border border-[rgb(var(--border))]/50 first:rounded-t-lg last:rounded-b-lg"
                     >
-                        <AccordionTrigger className="px-4 py-4 text-[15px] leading-6 hover:no-underline text-[rgb(var(--foreground))]">
+                        <AccordionTrigger className="px-4 py-4 text-base leading-6 hover:no-underline text-[rgb(var(--foreground))]">
                             {item.title}
                         </AccordionTrigger>
                         <AccordionContent className="text-[rgb(var(--foreground-muted))] pb-4 px-4">

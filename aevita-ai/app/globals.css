@@ -120,6 +120,9 @@
   }
 
   html {
+    /* Slightly larger type base so body copy stays comfortably readable;
+       everything rem-based scales with it. */
+    font-size: 17px;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
     /* Offset for fixed header */

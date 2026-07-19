@@ -451,7 +451,7 @@ export default function SolutionsPage() {
                                             <p className="text-sm font-medium text-[rgb(var(--foreground))] mb-1">
                                                 {step.name}
                                             </p>
-                                            <p className="text-xs leading-relaxed text-[rgb(var(--foreground-muted))]">
+                                            <p className="text-sm leading-relaxed text-[rgb(var(--foreground-muted))]">
                                                 {step.detail}
                                             </p>
                                         </li>

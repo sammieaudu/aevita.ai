@@ -117,7 +117,7 @@ export default function CareersPage() {
                                 <h3 className="font-medium text-sm text-[rgb(var(--foreground))] mb-1.5">
                                     {perk.title}
                                 </h3>
-                                <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed">
+                                <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed">
                                     {perk.description}
                                 </p>
                             </div>
