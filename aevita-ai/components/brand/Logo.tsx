@@ -1,11 +1,10 @@
-import { site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 type LogoVariant = "full" | "icon";
 type LogoTheme = "light" | "dark";
 
 interface LogoProps {
-    /** "full" renders mark + Aevita.ai wordmark, "icon" renders the mark only. */
+    /** "full" renders mark + aevita.ai wordmark, "icon" renders the mark only. */
     variant?: LogoVariant;
     /** Surface the logo sits on: "dark" → light wordmark, "light" → dark wordmark. */
     theme?: LogoTheme;
@@ -16,8 +15,8 @@ interface LogoProps {
 }
 
 /**
- * Aevita mark — an "A" built from two converging workflow strokes joined by
- * a connector, crowned by a decision node. Inline SVG so it stays crisp and
+ * Aevita mark — a violet orb: light where it catches the light at the upper
+ * left, deepening toward the lower right. Inline SVG so it stays crisp and
  * needs no network request.
  */
 function Mark({ size, id }: { size: number; id: string }) {
@@ -32,16 +31,13 @@ function Mark({ size, id }: { size: number; id: string }) {
             focusable="false"
         >
             <defs>
-                <linearGradient id={id} x1="10" y1="54" x2="54" y2="10" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stopColor="#22D3EE" />
-                    <stop offset="0.45" stopColor="#2F6BFF" />
-                    <stop offset="1" stopColor="#7C3AED" />
-                </linearGradient>
+                <radialGradient id={id} cx="0.32" cy="0.28" r="0.85">
+                    <stop offset="0" stopColor="#A99BFF" />
+                    <stop offset="0.55" stopColor="#7B6CF6" />
+                    <stop offset="1" stopColor="#5B4BD8" />
+                </radialGradient>
             </defs>
-            <path d="M12 53 L29.5 16" stroke={`url(#${id})`} strokeWidth="6" strokeLinecap="round" />
-            <path d="M34.5 16 L52 53" stroke={`url(#${id})`} strokeWidth="6" strokeLinecap="round" />
-            <path d="M23 40 H41" stroke={`url(#${id})`} strokeWidth="5" strokeLinecap="round" />
-            <circle cx="32" cy="9" r="4.5" fill="#22D3EE" />
+            <circle cx="32" cy="32" r="30" fill={`url(#${id})`} />
         </svg>
     );
 }
@@ -66,19 +62,17 @@ export function Logo({
     }
 
     return (
-        <span className={cn("inline-flex items-center gap-2 shrink-0", className)}>
+        <span className={cn("inline-flex items-center gap-2.5 shrink-0", className)}>
             <Mark size={size} id={gradientId} />
+            {/* Inherits Inter from the body font stack. */}
             <span
-                className={cn(
-                    "font-bold tracking-tight leading-none",
-                    theme === "dark" ? "text-white" : "text-[#0B1020]"
-                )}
-                style={{
-                    fontFamily: "var(--font-space-grotesk), system-ui, sans-serif",
-                    fontSize: Math.round(size * 0.62),
-                }}
+                className="font-medium tracking-tight leading-none"
+                style={{ fontSize: Math.round(size * 0.78) }}
             >
-                {site.displayName}
+                <span className={theme === "dark" ? "text-white" : "text-[#0B1020]"}>
+                    aevita
+                </span>
+                <span className="text-[#8B7CF8]">.ai</span>
             </span>
         </span>
     );

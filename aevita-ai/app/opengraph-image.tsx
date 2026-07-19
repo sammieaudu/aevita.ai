@@ -23,14 +23,18 @@ export default function OpengraphImage() {
                 }}
             >
                 <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-                    <svg width="72" height="72" viewBox="0 0 64 64" fill="none">
-                        <path d="M12 53 L29.5 16" stroke="#2F6BFF" strokeWidth="6" strokeLinecap="round" />
-                        <path d="M34.5 16 L52 53" stroke="#7C3AED" strokeWidth="6" strokeLinecap="round" />
-                        <path d="M23 40 H41" stroke="#2F6BFF" strokeWidth="5" strokeLinecap="round" />
-                        <circle cx="32" cy="9" r="4.5" fill="#22D3EE" />
-                    </svg>
-                    <div style={{ fontSize: 52, fontWeight: 700, letterSpacing: -1 }}>
-                        {site.displayName}
+                    <div
+                        style={{
+                            width: 64,
+                            height: 64,
+                            borderRadius: "50%",
+                            background:
+                                "radial-gradient(circle at 32% 28%, #A99BFF 0%, #7B6CF6 55%, #5B4BD8 100%)",
+                        }}
+                    />
+                    <div style={{ display: "flex", fontSize: 52, fontWeight: 600, letterSpacing: -1 }}>
+                        <span style={{ color: "#F8FAFC" }}>aevita</span>
+                        <span style={{ color: "#8B7CF8" }}>.ai</span>
                     </div>
                 </div>
                 <div
@@ -43,7 +47,7 @@ export default function OpengraphImage() {
                         maxWidth: 980,
                     }}
                 >
-                    Build the intelligent systems that move your business forward.
+                    Put AI to work in your business — every day.
                 </div>
                 <div
                     style={{
@@ -54,7 +58,7 @@ export default function OpengraphImage() {
                         lineHeight: 1.4,
                     }}
                 >
-                    {`AI agents, autonomous workflows, RAG systems, and enterprise integrations — engineered by ${site.name}.`}
+                    {`Secure AI-powered workflows for small and medium-sized businesses — designed, built, and managed by ${site.name}.`}
                 </div>
             </div>
         ),
