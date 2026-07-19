@@ -32,6 +32,7 @@ import {
     GraduationCap,
     Home,
     Briefcase,
+    CheckCircle2,
 } from "lucide-react";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
@@ -69,6 +70,90 @@ const problems = [
     },
 ];
 
+const overviewItems = [
+    {
+        title: "Find the right workflow",
+        description:
+            "We map the repetitive work, customer handoffs, and data movement that slow your team down.",
+    },
+    {
+        title: "Connect the tools you use",
+        description:
+            "Automations run across your CRM, inbox, calendar, documents, finance tools, and internal systems.",
+    },
+    {
+        title: "Keep people in control",
+        description:
+            "Sensitive actions pause for review, while routine steps move automatically with full audit history.",
+    },
+];
+
+const operatingSignals = [
+    "Lead response",
+    "Customer support",
+    "Document intake",
+    "Reporting",
+    "Approvals",
+    "Follow-up",
+];
+
+export function AutomationOverview() {
+    return (
+        <Section id="overview" className="pt-8 md:pt-12">
+            <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+                <div>
+                    <span className="mb-4 block text-sm font-medium uppercase tracking-wider text-[rgb(var(--primary))]">
+                        Operational AI, not experiments
+                    </span>
+                    <h2 className="font-heading text-3xl font-semibold leading-tight text-[rgb(var(--foreground))] md:text-4xl">
+                        A standard way to turn manual work into reliable automation
+                    </h2>
+                    <p className="mt-4 text-base leading-relaxed text-[rgb(var(--foreground-muted))] md:text-lg">
+                        Start with the workflows that already cost time, revenue, or
+                        visibility. Then automate the routine steps while keeping
+                        approvals, exceptions, and reporting clear.
+                    </p>
+                </div>
+
+                <div className="rounded-2xl border border-[rgb(var(--border))]/60 bg-[rgb(var(--background-secondary))]/60 p-4 md:p-5">
+                    <div className="grid gap-3 sm:grid-cols-3">
+                        {overviewItems.map((item) => (
+                            <div
+                                key={item.title}
+                                className="rounded-xl border border-[rgb(var(--border))]/55 bg-[rgb(var(--background-elevated))]/55 p-4"
+                            >
+                                <CheckCircle2 className="mb-3 h-5 w-5 text-[rgb(var(--accent-cyan))]" aria-hidden="true" />
+                                <h3 className="text-sm font-semibold text-[rgb(var(--foreground))]">
+                                    {item.title}
+                                </h3>
+                                <p className="mt-2 text-sm leading-relaxed text-[rgb(var(--foreground-muted))]">
+                                    {item.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+
+                    <div className="mt-4 rounded-xl border border-[rgb(var(--border))]/55 bg-[rgb(var(--background))]/35 p-4">
+                        <p className="text-xs font-medium uppercase tracking-wider text-[rgb(var(--foreground-muted))]">
+                            Common starting points
+                        </p>
+                        <div className="mt-3 flex flex-wrap gap-2">
+                            {operatingSignals.map((signal) => (
+                                <span
+                                    key={signal}
+                                    className="rounded-full border border-[rgb(var(--border))]/60 bg-[rgb(var(--secondary))]/70 px-3 py-1 text-xs text-[rgb(var(--foreground))]"
+                                >
+                                    {signal}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </Section>
+    );
+}
+
 export function Problems() {
     return (
         <Section id="problems" grid>
@@ -87,7 +172,7 @@ export function Problems() {
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
                     {problems.map((problem) => (
-                        <div key={problem.title} className="glass-card p-6">
+                        <div key={problem.title} className="rounded-xl border border-[rgb(var(--border))]/60 bg-[rgb(var(--background-secondary))]/60 p-6 transition-colors hover:border-[rgb(var(--primary))]/35">
                             <div className="w-10 h-10 rounded-lg bg-[rgb(var(--primary))]/10 flex items-center justify-center mb-4">
                                 <problem.icon className="w-5 h-5 text-[rgb(var(--primary))]" aria-hidden="true" />
                             </div>
@@ -256,9 +341,9 @@ export function Process() {
                         From manual workflow to managed AI automation
                     </h2>
                 </div>
-                <ol className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+                <ol className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
                     {processSteps.map((item, index) => (
-                        <li key={item.step} className="relative glass-card p-5">
+                        <li key={item.step} className="relative rounded-xl border border-[rgb(var(--border))]/60 bg-[rgb(var(--background-secondary))]/60 p-5">
                             <p className="text-xs font-mono text-[rgb(var(--primary))] mb-3">
                                 Step {item.step}
                             </p>
@@ -271,7 +356,7 @@ export function Process() {
                             {index < processSteps.length - 1 && (
                                 <span
                                     aria-hidden="true"
-                                    className="hidden lg:block absolute top-1/2 -right-3 w-3 border-t border-dashed border-[rgb(var(--accent-blue))]/40"
+                                    className="hidden lg:block absolute top-1/2 -right-3 w-3 border-t border-dashed border-[rgb(var(--accent-blue))]/50"
                                 />
                             )}
                         </li>

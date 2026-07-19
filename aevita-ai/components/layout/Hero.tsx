@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { ArrowRight, CheckCircle2, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { EtheralShadow } from "@/components/ui/etheral-shadow";
@@ -18,8 +18,14 @@ export function Hero() {
                   transition: { duration: 0.5, delay },
               };
 
+    const proofPoints = [
+        "Workflow discovery",
+        "Secure integrations",
+        "Human approval gates",
+    ];
+
     return (
-        <section className="relative flex items-center justify-center pt-32 md:pt-44 pb-16 md:pb-24 overflow-hidden">
+        <section className="relative flex items-center justify-center pt-32 md:pt-44 pb-14 md:pb-20 overflow-hidden">
             {/* Ethereal Shadow animated background — the preserved Getbeta.ai atmosphere */}
             <div className="absolute inset-0 z-0">
                 <EtheralShadow
@@ -51,16 +57,15 @@ export function Hero() {
                 {/* Headline */}
                 <motion.h1
                     {...entrance(0.05)}
-                    className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[rgb(var(--foreground))] max-w-4xl mb-4 md:mb-5 leading-[1.12]"
+                    className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[rgb(var(--foreground))] max-w-5xl mb-4 md:mb-5 leading-[1.08]"
                 >
-                    Put <span className="text-gradient">AI to work</span> in your
-                    business — every day.
+                    Practical AI automation for teams that need work to move faster.
                 </motion.h1>
 
                 {/* Supporting copy */}
                 <motion.p
                     {...entrance(0.1)}
-                    className="text-base md:text-lg text-[rgb(var(--foreground-muted))] max-w-xl md:max-w-2xl mb-6 md:mb-8 leading-relaxed px-2"
+                    className="text-base md:text-lg text-[rgb(var(--foreground-muted))] max-w-xl md:max-w-3xl mb-6 md:mb-8 leading-relaxed px-2"
                 >
                     {site.displayName} designs and implements secure AI-powered
                     workflows that help small and medium-sized businesses automate
@@ -97,6 +102,21 @@ export function Hero() {
                     No pressure. No AI jargon. Leave with practical automation
                     opportunities for your business.
                 </motion.p>
+
+                <motion.div
+                    {...entrance(0.25)}
+                    className="mt-8 grid w-full max-w-4xl gap-3 sm:grid-cols-3"
+                >
+                    {proofPoints.map((point) => (
+                        <div
+                            key={point}
+                            className="flex min-h-12 items-center justify-center gap-2 rounded-xl border border-[rgb(var(--border))]/60 bg-[rgb(var(--background-secondary))]/60 px-4 py-3 text-sm text-[rgb(var(--foreground))] backdrop-blur"
+                        >
+                            <CheckCircle2 className="h-4 w-4 shrink-0 text-[rgb(var(--accent-cyan))]" aria-hidden="true" />
+                            <span>{point}</span>
+                        </div>
+                    ))}
+                </motion.div>
 
             </div>
         </section>

@@ -4,6 +4,7 @@ import { Hero } from "@/components/layout/Hero";
 import { IntegrationEcosystem } from "@/components/sections/IntegrationEcosystem";
 import {
     Problems,
+    AutomationOverview,
     SolutionsGrid,
     Process,
     Capabilities,
@@ -101,6 +102,7 @@ export default function Home() {
       />
       <Hero />
       <IntegrationEcosystem />
+      <AutomationOverview />
       <Problems />
       <SolutionsGrid />
       <WorkflowShowcase />

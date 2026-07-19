@@ -57,7 +57,10 @@ export function Header() {
                         href="/assessment"
                         className="container mx-auto px-3 md:px-4 h-8 flex items-center justify-center gap-2 text-[11px] md:text-xs text-[rgb(var(--foreground))]"
                     >
-                        <span className="truncate">
+                        <span className="truncate sm:hidden">
+                            Free AI automation assessment
+                        </span>
+                        <span className="hidden truncate sm:inline">
                             Free AI automation assessment for qualified small and
                             medium-sized businesses
                         </span>
