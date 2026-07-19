@@ -59,7 +59,8 @@ export function Hero() {
                     {...entrance(0.05)}
                     className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[rgb(var(--foreground))] max-w-5xl mb-4 md:mb-5 leading-[1.08]"
                 >
-                    Practical AI automation for teams that need work to move faster.
+                    Bringing businesses into a new era through{" "}
+                    <span className="text-gradient">intelligent automation</span>.
                 </motion.h1>
 
                 {/* Supporting copy */}
