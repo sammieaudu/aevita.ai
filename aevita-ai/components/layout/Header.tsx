@@ -23,6 +23,7 @@ const navItems = [
             { name: "All Solutions", href: "/solutions" },
         ],
     },
+    { name: "How It Works", href: "/how-it-works" },
     { name: "Workflows", href: "/workflows" },
     { name: "Industries", href: "/industries" },
     { name: "About", href: "/about" },
@@ -50,6 +51,22 @@ export function Header() {
                 : "bg-transparent border-b border-transparent"
                 }`}
         >
+            {!isScrolled && (
+                <div className="bg-[rgb(var(--primary))]/10 border-b border-[rgb(var(--primary))]/20 backdrop-blur-sm">
+                    <Link
+                        href="/assessment"
+                        className="container mx-auto px-3 md:px-4 h-8 flex items-center justify-center gap-2 text-[11px] md:text-xs text-[rgb(var(--foreground))]"
+                    >
+                        <span className="truncate">
+                            Free AI automation assessment for qualified small and
+                            medium-sized businesses
+                        </span>
+                        <span className="shrink-0 font-medium text-[rgb(var(--primary))] underline underline-offset-2">
+                            Apply now
+                        </span>
+                    </Link>
+                </div>
+            )}
             <div className="container mx-auto px-3 md:px-4 h-14 md:h-16 flex items-center justify-between">
                 <Link
                     href="/"

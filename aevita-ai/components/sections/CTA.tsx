@@ -47,27 +47,24 @@ export function CTA() {
                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[rgb(var(--secondary))]/50 border border-[rgb(var(--border))] text-sm">
                         <Sparkles className="w-4 h-4 text-[rgb(var(--primary))]" aria-hidden="true" />
                         <span className="text-[rgb(var(--foreground-muted))]">
-                            Free 30-minute strategy session
+                            Free AI automation assessment
                         </span>
                     </div>
 
                     <h2 className="font-heading text-3xl md:text-5xl font-semibold text-[rgb(var(--foreground))]">
-                        Ready to make your operation{" "}
-                        <span className="text-gradient">intelligent</span>?
+                        You don&apos;t need more AI tools. You need the{" "}
+                        <span className="text-gradient">right AI workflow</span>.
                     </h2>
 
                     <p className="text-lg text-[rgb(var(--foreground-muted))] max-w-xl mx-auto">
-                        Bring your highest-friction process. We&apos;ll map the systems
-                        involved and propose the first automation worth building.
+                        Let {site.name} identify where AI can create the greatest
+                        operational value in your business and build a practical
+                        roadmap for implementation.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                         <Button size="lg" asChild>
-                            <Link
-                                href={site.cta.primary.href}
-                                data-cal-link={site.scheduling.calLink}
-                                data-cal-config='{"layout":"month_view"}'
-                            >
+                            <Link href={site.cta.primary.href}>
                                 {site.cta.primary.label}
                                 <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                             </Link>

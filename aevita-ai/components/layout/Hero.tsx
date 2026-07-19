@@ -54,8 +54,8 @@ export function Hero() {
                     {...entrance(0.05)}
                     className="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight text-[rgb(var(--foreground))] max-w-4xl mb-4 md:mb-5 leading-[1.12]"
                 >
-                    Build the <span className="text-gradient">intelligent systems</span>{" "}
-                    that move your business forward.
+                    Put <span className="text-gradient">AI to work</span> in your
+                    business — every day.
                 </motion.h1>
 
                 {/* Supporting copy */}
@@ -63,9 +63,10 @@ export function Hero() {
                     {...entrance(0.1)}
                     className="text-base md:text-lg text-[rgb(var(--foreground-muted))] max-w-xl md:max-w-2xl mb-6 md:mb-8 leading-relaxed px-2"
                 >
-                    {site.displayName} designs AI agents, autonomous workflows,
-                    generative AI applications, and enterprise integrations that turn
-                    disconnected operations into intelligent, scalable systems.
+                    {site.displayName} designs and implements secure AI-powered
+                    workflows that help small and medium-sized businesses automate
+                    repetitive work, follow up with customers, improve operations, and
+                    grow more efficiently.
                 </motion.p>
 
                 {/* CTA Buttons */}
@@ -89,15 +90,14 @@ export function Hero() {
                     </Button>
                 </motion.div>
 
-                {/* Tertiary link */}
-                <motion.div {...entrance(0.2)} className="mt-4">
-                    <Link
-                        href={site.cta.tertiary.href}
-                        className="text-sm text-[rgb(var(--foreground-muted))] hover:text-[rgb(var(--foreground))] underline underline-offset-4 decoration-[rgb(var(--border))] hover:decoration-[rgb(var(--primary))] transition-colors"
-                    >
-                        {site.cta.tertiary.label}
-                    </Link>
-                </motion.div>
+                {/* Trust microcopy */}
+                <motion.p
+                    {...entrance(0.2)}
+                    className="mt-4 text-xs md:text-sm text-[rgb(var(--foreground-muted))]"
+                >
+                    No pressure. No AI jargon. Leave with practical automation
+                    opportunities for your business.
+                </motion.p>
 
                 {/* Workflow visualization */}
                 <motion.div

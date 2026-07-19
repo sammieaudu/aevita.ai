@@ -11,9 +11,9 @@ export const site = {
     displayName: "Aevita.ai",
     legalName: "Aevita AI, Inc.",
     domain: "https://aevita.ai",
-    tagline: "AI Engineering & Intelligent Automation",
+    tagline: "Your AI Automation Partner for Everyday Business Operations",
     description:
-        "Aevita.ai designs AI agents, autonomous workflows, generative AI applications, and enterprise integrations that turn disconnected operations into intelligent, scalable systems.",
+        "Aevita helps small and medium-sized businesses identify, build, and manage AI-powered workflows that save time, reduce costs, improve customer experiences, and help teams grow without adding unnecessary overhead.",
     foundedYear: 2023,
 
     emails: {
@@ -55,13 +55,14 @@ export const site = {
     },
 
     cta: {
-        primary: { label: "Book an AI Strategy Call", href: "/contact" },
-        secondary: { label: "Explore Aevita Solutions", href: "/solutions" },
-        tertiary: { label: "See Business Workflows", href: "/workflows" },
+        primary: { label: "Book Your Free AI Assessment", href: "/assessment" },
+        secondary: { label: "See What You Can Automate", href: "/solutions" },
+        tertiary: { label: "Get Your Automation Roadmap", href: "/how-it-works" },
     },
 
     navigation: [
         { name: "Solutions", href: "/solutions" },
+        { name: "How It Works", href: "/how-it-works" },
         { name: "Workflows", href: "/workflows" },
         { name: "Industries", href: "/industries" },
         { name: "About", href: "/about" },
@@ -85,31 +86,37 @@ export const site = {
             { name: "Contact", href: "/contact" },
         ],
         Resources: [
+            { name: "How It Works", href: "/how-it-works" },
             { name: "Business Workflows", href: "/workflows" },
             { name: "Case Studies", href: "/portfolio" },
             { name: "Documentation", href: "/docs" },
             { name: "Pricing", href: "/pricing" },
+            { name: "Book an Assessment", href: "/assessment" },
         ],
         Legal: [
             { name: "Terms of Service", href: "/terms" },
             { name: "Privacy Policy", href: "/privacy" },
+            { name: "Responsible AI Policy", href: "/responsible-ai" },
+            { name: "Security & Data Protection", href: "/security" },
         ],
     },
 
     defaultMetadata: {
-        title: "Aevita.ai — AI Engineering & Intelligent Automation",
+        title: "Aevita.ai — AI Automation for Small & Medium-Sized Businesses",
         titleTemplate: "%s | Aevita.ai",
         description:
-            "Aevita designs and builds AI agents, autonomous business workflows, RAG systems, generative AI applications, and enterprise automations that help organizations operate faster and scale efficiently.",
+            "Aevita designs, builds, and manages secure AI-powered workflows that help small and medium-sized businesses automate repetitive work, follow up with customers faster, and grow without adding overhead.",
         keywords: [
-            "AI engineering",
-            "AI agents",
-            "business automation",
-            "enterprise integrations",
-            "generative AI",
-            "RAG systems",
-            "AI-powered marketing",
-            "custom AI platforms",
+            "AI automation for small businesses",
+            "AI workflow automation",
+            "business process automation",
+            "AI consulting for small business",
+            "custom AI assistants",
+            "sales automation services",
+            "customer service automation",
+            "operations automation",
+            "AI integration services",
+            "managed AI automation",
         ],
     },
 } as const;

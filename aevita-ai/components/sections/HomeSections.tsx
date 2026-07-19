@@ -5,12 +5,10 @@ import {
     Workflow,
     Sparkles,
     Library,
-    Layers,
     Cable,
     Megaphone,
     FileText,
     MessageSquare,
-    Route,
     Inbox,
     ClipboardX,
     EyeOff,
@@ -46,28 +44,28 @@ import { jobs } from "@/lib/careers";
 
 const problems = [
     {
-        icon: Inbox,
-        title: "Work trapped in inboxes",
+        icon: TimerOff,
+        title: "Leads go cold before anyone follows up",
         description:
-            "Core processes run on email threads and spreadsheets. Handoffs stall, status is invisible, and nobody owns the next step.",
+            "New inquiries sit in an inbox for hours or days. By the time someone responds, the prospect has already called a competitor.",
     },
     {
         icon: ClipboardX,
-        title: "Manual re-keying between systems",
+        title: "The same data gets typed in twice",
         description:
-            "Skilled people copy data between CRM, ERP, and documents all day — slow, expensive, and a constant source of errors.",
+            "Your team re-enters the same customer information into the CRM, invoices, spreadsheets, and email — slow, expensive, and error-prone.",
+    },
+    {
+        icon: Inbox,
+        title: "Customers wait too long for answers",
+        description:
+            "Routine questions queue behind complex ones. Response times stretch, reviews suffer, and staff burn out on repetitive requests.",
     },
     {
         icon: EyeOff,
-        title: "Knowledge nobody can find",
+        title: "Growth means hiring for repetitive work",
         description:
-            "Answers live in wikis, drives, and veterans' heads. Teams re-ask solved questions and decisions wait on the one person who knows.",
-    },
-    {
-        icon: TimerOff,
-        title: "Customers waiting on humans",
-        description:
-            "Routine requests queue behind complex ones. Response times stretch while agents burn out on repetitive tickets.",
+            "Important tasks depend on manual reminders, managers lack visibility into daily operations, and scaling means adding headcount for admin.",
     },
 ];
 
@@ -80,11 +78,11 @@ export function Problems() {
                         The problems we solve
                     </span>
                     <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[rgb(var(--foreground))] mb-4">
-                        Operations break where systems don&apos;t connect
+                        Your team is losing hours to work AI can handle
                     </h2>
                     <p className="text-[rgb(var(--foreground-muted))] md:text-lg">
-                        Most organizations don&apos;t need more software — they need the
-                        software they have to work together, intelligently.
+                        {site.name} turns these disconnected manual processes into
+                        intelligent, measurable workflows.
                     </p>
                 </div>
                 <div className="grid sm:grid-cols-2 gap-4 md:gap-6">
@@ -112,16 +110,48 @@ export function Problems() {
 /* ------------------------------------------------------------------ */
 
 const solutionCards = [
-    { icon: Bot, title: "AI Agents & Autonomous Systems", description: "Software teammates that execute multi-step work across your tools, with humans approving what matters.", href: "/solutions#ai-agents" },
-    { icon: Workflow, title: "Enterprise Workflow Automation", description: "End-to-end processes rebuilt as reliable, observable pipelines instead of email chains.", href: "/solutions#workflow-automation" },
-    { icon: Sparkles, title: "Generative AI Applications", description: "Drafting, summarization, and extraction products grounded in your data and formats.", href: "/solutions#generative-ai" },
-    { icon: Library, title: "RAG & Knowledge Systems", description: "Cited answers from your documents — not from a model's memory.", href: "/solutions#rag-knowledge" },
-    { icon: Layers, title: "Custom AI Platforms", description: "Your own multi-model, multi-tenant AI infrastructure — owned, not rented.", href: "/solutions#custom-platforms" },
-    { icon: Cable, title: "CRM & ERP Integrations", description: "Bidirectional, validated data flow between your systems of record.", href: "/solutions#crm-erp" },
-    { icon: Megaphone, title: "AI-Powered Marketing Automation", description: "Segmentation, personalization, and follow-up that run themselves — inside brand guardrails.", href: "/solutions#marketing-automation" },
-    { icon: FileText, title: "Document Intelligence", description: "Contracts, invoices, and forms converted into structured, validated data.", href: "/solutions#document-intelligence" },
-    { icon: MessageSquare, title: "AI Customer Experience", description: "Instant resolution where it's safe, graceful escalation where it isn't.", href: "/solutions#customer-experience" },
-    { icon: Route, title: "Digital Transformation", description: "A sequenced modernization program delivered as running systems, not slides.", href: "/solutions#digital-transformation" },
+    {
+        icon: Megaphone,
+        title: "Sales Automation",
+        description:
+            "Lead capture and qualification, personalized email and SMS follow-up, CRM updates, proposal generation, and dormant-lead re-engagement.",
+        href: "/solutions#marketing-automation",
+    },
+    {
+        icon: MessageSquare,
+        title: "Customer-Service Automation",
+        description:
+            "AI assistants for common questions, ticket classification and routing, appointment reminders, feedback collection, and escalation to your team.",
+        href: "/solutions#customer-experience",
+    },
+    {
+        icon: Sparkles,
+        title: "Marketing Automation",
+        description:
+            "Content workflows, email campaigns, lead nurturing, review requests, customer segmentation, and campaign performance summaries.",
+        href: "/solutions#generative-ai",
+    },
+    {
+        icon: Workflow,
+        title: "Operations Automation",
+        description:
+            "Data entry and synchronization, report generation, document processing, internal approvals, invoice reminders, and daily operational summaries.",
+        href: "/solutions#workflow-automation",
+    },
+    {
+        icon: FileText,
+        title: "Hiring & HR Automation",
+        description:
+            "Candidate screening, interview scheduling, application summaries, new-hire onboarding, document collection, and internal HR assistants.",
+        href: "/solutions#document-intelligence",
+    },
+    {
+        icon: Bot,
+        title: "Executive AI Assistants",
+        description:
+            "Daily business briefings, meeting preparation, action-item tracking, KPI monitoring, document summarization, and decision-support reports.",
+        href: "/solutions#ai-agents",
+    },
 ];
 
 export function SolutionsGrid() {
@@ -130,17 +160,18 @@ export function SolutionsGrid() {
             <div className="max-w-6xl mx-auto">
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <span className="text-[rgb(var(--primary))] text-sm font-medium uppercase tracking-wider mb-4 block">
-                        Core solutions
+                        What we automate
                     </span>
                     <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[rgb(var(--foreground))] mb-4">
-                        What {site.name} designs and builds
+                        What can {site.name} automate for your business?
                     </h2>
                     <p className="text-[rgb(var(--foreground-muted))] md:text-lg">
-                        Ten engineering disciplines, one goal: an operation that runs
-                        itself where it can, and asks a human where it should.
+                        Six areas of your business where AI-powered workflows reliably
+                        save time — automated where it&apos;s safe, human-approved where
+                        it matters.
                     </p>
                 </div>
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                     {solutionCards.map((solution) => (
                         <Link
                             key={solution.title}
@@ -156,9 +187,9 @@ export function SolutionsGrid() {
                             <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed mb-3">
                                 {solution.description}
                             </p>
-                            <span className="mt-auto inline-flex items-center gap-1 text-xs text-[rgb(var(--primary))] opacity-0 group-hover:opacity-100 group-focus-visible:opacity-100 transition-opacity">
-                                Explore
-                                <ArrowRight className="w-3 h-3" aria-hidden="true" />
+                            <span className="mt-auto inline-flex items-center gap-1 text-xs text-[rgb(var(--primary))]">
+                                Explore this solution
+                                <ArrowRight className="w-3 h-3 group-hover:translate-x-0.5 transition-transform" aria-hidden="true" />
                             </span>
                         </Link>
                     ))}
@@ -185,25 +216,31 @@ const processSteps = [
         step: "01",
         title: "Discover",
         description:
-            "A working session maps your highest-friction processes, the systems involved, and where AI pays off first.",
+            "We identify repetitive tasks, delays, lost opportunities, and operational bottlenecks in your day-to-day workflows.",
     },
     {
         step: "02",
-        title: "Design",
+        title: "Prioritize",
         description:
-            "Architecture, integration points, and the human approval stages — agreed before a line of code ships.",
+            "We rank automation opportunities by business value, complexity, risk, and potential return on investment.",
     },
     {
         step: "03",
-        title: "Build & evaluate",
+        title: "Build",
         description:
-            "Production engineering with evaluation suites, guardrails, and observability from day one.",
+            "We create and integrate the AI workflow with your current tools and processes — no rip-and-replace.",
     },
     {
         step: "04",
-        title: "Launch & operate",
+        title: "Launch",
         description:
-            "We run the system with you, tune it on live data, then hand over runbooks and ownership.",
+            "We test the automation, train your team, document the system, and deploy it safely.",
+    },
+    {
+        step: "05",
+        title: "Monitor & improve",
+        description:
+            "We monitor performance, resolve issues, measure results, and expand the automations that work.",
     },
 ];
 
@@ -216,19 +253,19 @@ export function Process() {
                         How {site.name} works
                     </span>
                     <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[rgb(var(--foreground))] mb-4">
-                        From mapped process to running system
+                        From manual workflow to managed AI automation
                     </h2>
                 </div>
-                <ol className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <ol className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
                     {processSteps.map((item, index) => (
-                        <li key={item.step} className="relative glass-card p-6">
+                        <li key={item.step} className="relative glass-card p-5">
                             <p className="text-xs font-mono text-[rgb(var(--primary))] mb-3">
-                                Phase {item.step}
+                                Step {item.step}
                             </p>
-                            <h3 className="font-semibold text-[rgb(var(--foreground))] mb-2">
+                            <h3 className="font-semibold text-sm text-[rgb(var(--foreground))] mb-2">
                                 {item.title}
                             </h3>
-                            <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed">
+                            <p className="text-xs text-[rgb(var(--foreground-muted))] leading-relaxed">
                                 {item.description}
                             </p>
                             {index < processSteps.length - 1 && (
@@ -240,6 +277,14 @@ export function Process() {
                         </li>
                     ))}
                 </ol>
+                <div className="text-center pt-8">
+                    <Button variant="secondary" size="lg" asChild>
+                        <Link href="/how-it-works">
+                            Get your AI automation roadmap
+                            <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
+                        </Link>
+                    </Button>
+                </div>
             </div>
         </Section>
     );
@@ -377,11 +422,16 @@ export function UseCases() {
             <div className="max-w-5xl mx-auto">
                 <div className="max-w-3xl mx-auto text-center mb-12">
                     <span className="text-[rgb(var(--primary))] text-sm font-medium uppercase tracking-wider mb-4 block">
-                        Selected use cases
+                        Example automation scenarios
                     </span>
                     <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[rgb(var(--foreground))] mb-4">
                         What this looks like in practice
                     </h2>
+                    <p className="text-[rgb(var(--foreground-muted))] md:text-lg">
+                        Illustrative scenarios showing how {site.name} workflows
+                        typically run — actual results depend on your processes and
+                        systems.
+                    </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-4 md:gap-6">
                     {homeUseCases.map((useCase) => (
@@ -417,26 +467,32 @@ export function UseCases() {
 
 const engagements = [
     {
-        title: "AI Strategy Sprint",
-        duration: "1–2 weeks",
+        title: "AI Opportunity Assessment",
+        duration: "Best for getting started",
         description:
-            "An operational audit that maps your processes and systems, then delivers a prioritized automation roadmap scored by impact and risk.",
-        deliverable: "Roadmap + first-build proposal",
+            "Workflow discovery, automation opportunity analysis, prioritized recommendations, risk and data considerations, and a 30-, 60-, and 90-day roadmap.",
+        deliverable: "A prioritized automation roadmap",
+        ctaLabel: "Request an assessment",
+        ctaHref: "/assessment",
     },
     {
-        title: "Build & Launch",
-        duration: "4–12 weeks",
+        title: "AI Automation Sprint",
+        duration: "One high-value workflow",
         description:
-            "A dedicated engineering team designs, builds, evaluates, and ships a production AI system — agents, workflows, RAG, or integrations.",
-        deliverable: "A running system you own",
+            "Workflow design, AI configuration, integration with your business systems, testing, deployment, team training, documentation, and an initial support period.",
+        deliverable: "A running automation you own",
+        ctaLabel: "Start an automation sprint",
+        ctaHref: "/contact",
         highlighted: true,
     },
     {
-        title: "Managed AI Operations",
-        duration: "Ongoing",
+        title: "Managed AI Automation",
+        duration: "Ongoing partnership",
         description:
-            "We operate, monitor, and continuously improve your automations — model updates, evaluation runs, and new capabilities each quarter.",
-        deliverable: "SLA-backed operations",
+            "Monthly automation capacity, workflow monitoring, incident response, performance reviews, continuous improvement, and new automation development.",
+        deliverable: "Monitored, improving automations",
+        ctaLabel: "Discuss managed automation",
+        ctaHref: "/contact",
     },
 ];
 
@@ -451,6 +507,10 @@ export function EngagementModels() {
                     <h2 className="font-heading text-3xl md:text-4xl font-semibold text-[rgb(var(--foreground))] mb-4">
                         Start small, scale what works
                     </h2>
+                    <p className="text-[rgb(var(--foreground-muted))] md:text-lg">
+                        Three simple ways to work with {site.name}. Pricing is scoped to
+                        your workflows — request a proposal for specifics.
+                    </p>
                 </div>
                 <div className="grid md:grid-cols-3 gap-4 md:gap-6">
                     {engagements.map((engagement) => (
@@ -476,9 +536,19 @@ export function EngagementModels() {
                             <p className="text-sm text-[rgb(var(--foreground-muted))] leading-relaxed mb-4">
                                 {engagement.description}
                             </p>
-                            <p className="mt-auto text-xs text-[rgb(var(--foreground))] border-t border-[rgb(var(--border))]/40 pt-3">
+                            <p className="mt-auto text-xs text-[rgb(var(--foreground))] border-t border-[rgb(var(--border))]/40 pt-3 mb-4">
                                 Deliverable: {engagement.deliverable}
                             </p>
+                            <Button
+                                variant={engagement.highlighted ? "default" : "outline"}
+                                size="sm"
+                                asChild
+                            >
+                                <Link href={engagement.ctaHref}>
+                                    {engagement.ctaLabel}
+                                    <ArrowRight className="ml-2 w-3.5 h-3.5" aria-hidden="true" />
+                                </Link>
+                            </Button>
                         </div>
                     ))}
                 </div>
@@ -555,6 +625,15 @@ export function SecurityGovernance() {
                             </p>
                         </div>
                     ))}
+                </div>
+                <div className="text-center pt-8">
+                    <Link
+                        href="/security"
+                        className="text-sm text-[rgb(var(--primary))] hover:underline underline-offset-4 inline-flex items-center gap-1"
+                    >
+                        Read our security &amp; data protection practices
+                        <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                    </Link>
                 </div>
             </div>
         </Section>
