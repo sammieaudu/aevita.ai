@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { site } from "@/lib/site";
+import { insertLead } from "@/lib/db";
 
 const contactSchema = z.object({
     name: z.string().trim().min(2, "Please enter your name").max(200),
@@ -54,9 +55,19 @@ export async function POST(request: Request) {
         }
     }
 
+    const stored = await insertLead({
+        type: "contact-message",
+        fullName: parsed.data.name,
+        email: parsed.data.email,
+        company: parsed.data.company,
+        solution: parsed.data.solution,
+        message: parsed.data.message,
+        deliveredWebhook: delivered,
+    });
+
     return NextResponse.json({
         ok: true,
-        delivered,
+        delivered: delivered || stored,
         fallbackEmail: site.emails.primary,
     });
 }

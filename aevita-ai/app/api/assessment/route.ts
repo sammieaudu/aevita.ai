@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { site } from "@/lib/site";
+import { insertLead } from "@/lib/db";
 
 const assessmentSchema = z.object({
     fullName: z.string().trim().min(2, "Please enter your name").max(200),
@@ -102,9 +103,29 @@ export async function POST(request: Request) {
         }
     }
 
+    const stored = await insertLead({
+        type: "assessment-request",
+        fullName: lead.fullName,
+        email: lead.email,
+        phone: lead.phone,
+        company: lead.company,
+        website: lead.website,
+        industry: lead.industry,
+        companySize: lead.companySize,
+        tools: lead.tools,
+        process: lead.process,
+        hoursPerWeek: lead.hoursPerWeek,
+        goal: lead.goal,
+        timeline: lead.timeline,
+        budget: lead.budget,
+        contactMethod: lead.contactMethod,
+        leadScore,
+        deliveredWebhook: delivered,
+    });
+
     return NextResponse.json({
         ok: true,
-        delivered,
+        delivered: delivered || stored,
         fallbackEmail: site.emails.primary,
     });
 }
