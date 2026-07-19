@@ -22,15 +22,21 @@ export function CalInline() {
         const mount = () => {
             if (cancelled) return;
             const ns = w.Cal?.ns?.[site.scheduling.calNamespace];
-            if (!ns) {
+            if (typeof ns !== "function") {
                 setTimeout(mount, 200);
                 return;
             }
-            ns("inline", {
-                elementOrSelector: element,
-                calLink: site.scheduling.calLink,
-                config: { layout: "month_view", theme: "dark" },
-            });
+            // Never let an embed failure take down the page — the visible
+            // fallback link below covers that case.
+            try {
+                ns("inline", {
+                    elementOrSelector: element,
+                    calLink: site.scheduling.calLink,
+                    config: { layout: "month_view", theme: "dark" },
+                });
+            } catch (error) {
+                console.error("Cal.com inline embed failed", error);
+            }
         };
         mount();
 
