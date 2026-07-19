@@ -1,18 +1,17 @@
 import { Section } from "@/components/ui/section";
-import { LogoCloud } from "@/components/ui/logo-cloud";
 
 /**
  * Integration ecosystem — the systems Aevita connects (text chips, no
- * third-party logo assets) plus the engineering stack we build on.
+ * third-party logo assets).
  */
 
 const integrationGroups: { category: string; systems: string[] }[] = [
-    { category: "CRM & Sales", systems: ["Salesforce", "HubSpot", "Pipedrive"] },
-    { category: "ERP & Finance", systems: ["SAP", "NetSuite", "QuickBooks", "Stripe"] },
-    { category: "Messaging", systems: ["Slack", "Microsoft Teams", "Gmail", "Outlook"] },
-    { category: "Documents & Knowledge", systems: ["SharePoint", "Google Drive", "Notion", "Confluence", "DocuSign"] },
-    { category: "Data & AI", systems: ["Postgres", "Snowflake", "Redis", "OpenAI", "Anthropic"] },
-    { category: "Support & Ops", systems: ["Zendesk", "Intercom", "Jira", "n8n"] },
+    { category: "CRM & Sales", systems: ["Salesforce", "HubSpot", "Zoho", "GoHighLevel", "Pipedrive"] },
+    { category: "Finance & Commerce", systems: ["QuickBooks", "Stripe", "Shopify", "NetSuite"] },
+    { category: "Messaging", systems: ["Slack", "Microsoft Teams", "WhatsApp", "Gmail", "Outlook"] },
+    { category: "Documents & Scheduling", systems: ["Microsoft 365", "Google Workspace", "Notion", "Calendly", "DocuSign"] },
+    { category: "Marketing", systems: ["Mailchimp", "Meta Ads", "Google Ads", "Klaviyo"] },
+    { category: "Support & Automation", systems: ["Zendesk", "Intercom", "Zapier", "Make", "n8n"] },
 ];
 
 export function IntegrationEcosystem() {
@@ -28,7 +27,7 @@ export function IntegrationEcosystem() {
                     </h2>
                 </div>
 
-                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-12">
+                <ul className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 mb-8">
                     {integrationGroups.map((group) => (
                         <li
                             key={group.category}
@@ -51,10 +50,10 @@ export function IntegrationEcosystem() {
                     ))}
                 </ul>
 
-                <p className="mb-6 text-center text-sm text-[rgb(var(--foreground-muted))]">
-                    Engineered on a modern, battle-tested stack
+                <p className="text-center text-sm text-[rgb(var(--foreground-muted))]">
+                    Don&apos;t see your tools? We also integrate with ERPs, internal
+                    databases, and custom applications.
                 </p>
-                <LogoCloud />
             </div>
         </Section>
     );

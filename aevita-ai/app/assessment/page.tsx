@@ -40,8 +40,8 @@ export default function AssessmentPage() {
             </Section>
 
             <Section className="pt-0">
-                <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_1.6fr] gap-8 items-start">
-                    <aside className="glass-card rounded-2xl p-6 md:p-8 lg:sticky lg:top-28">
+                <div className="max-w-5xl mx-auto grid lg:grid-cols-[1fr_1.6fr] gap-8 items-start px-4 lg:px-0">
+                    <aside className="glass-card rounded-2xl p-6 md:p-8 lg:sticky lg:top-28 min-w-0">
                         <h2 className="font-heading text-lg font-semibold text-[rgb(var(--foreground))] mb-4">
                             What&apos;s included
                         </h2>

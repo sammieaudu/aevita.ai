@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
-    title: "Contact — Book an AI Strategy Call",
+    title: "Contact — Talk to an AI Automation Expert",
     description:
-        "Book an AI strategy call with Aevita to discuss AI agents, workflow automation, RAG systems, generative AI applications, and enterprise integrations.",
+        "Book a free AI automation assessment call or send Aevita a message. We'll map your workflows and show you where automation creates the most value for your business.",
     alternates: {
         canonical: absoluteUrl("/contact"),
     },

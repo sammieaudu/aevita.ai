@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { LocationMap } from "@/components/ui/expand-map";
 import { FaqsSection } from "@/components/ui/faqs-section";
-import { BookingCalendar } from "@/components/booking-calendar";
+import { CalInline } from "@/components/CalInline";
 import { site } from "@/lib/site";
 
 const solutionOptions = [
@@ -102,7 +102,7 @@ export default function ContactPage() {
                         >
                             <Calendar className="w-4 h-4 text-[rgb(var(--primary))]" aria-hidden="true" />
                             <span className="text-[rgb(var(--foreground-muted))]">
-                                Free 30-minute strategy session
+                                Free AI automation assessment call
                             </span>
                         </motion.div>
 
@@ -112,8 +112,8 @@ export default function ContactPage() {
                             transition={{ duration: 0.6, delay: 0.1 }}
                             className="font-heading text-4xl md:text-6xl font-semibold text-[rgb(var(--foreground))] mb-6 leading-tight"
                         >
-                            Book an{" "}
-                            <span className="text-gradient">AI Strategy Call</span>
+                            Talk to an{" "}
+                            <span className="text-gradient">AI automation expert</span>
                         </motion.h1>
 
                         <motion.p
@@ -122,20 +122,21 @@ export default function ContactPage() {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-xl text-[rgb(var(--foreground-muted))] max-w-2xl mx-auto mb-8"
                         >
-                            Bring your highest-friction process. We&apos;ll map the systems
-                            involved, identify where AI agents and automation pay off first,
-                            and propose the first build worth making.
+                            Bring your highest-friction process. We&apos;ll map the
+                            systems involved, identify where automation pays off first,
+                            and leave you with practical next steps — no pressure, no
+                            jargon.
                         </motion.p>
                     </div>
 
-                    {/* Booking Calendar */}
+                    {/* Live booking calendar */}
                     <motion.div
                         initial={shouldReduceMotion ? false : { opacity: 0, scale: 0.98 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="max-w-4xl mx-auto"
                     >
-                        <BookingCalendar />
+                        <CalInline />
                     </motion.div>
                 </div>
             </section>

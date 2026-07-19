@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 import { site } from "@/lib/site";
 
 const inputClass =
-    "w-full px-4 py-2.5 rounded-lg bg-[rgb(var(--background-secondary))]/80 border border-[rgb(var(--border))]/60 text-sm text-[rgb(var(--foreground))] placeholder:text-[rgb(var(--foreground-muted))]/60 focus:outline-none focus:border-[rgb(var(--primary))]/60 focus:ring-1 focus:ring-[rgb(var(--primary))]/40 transition-colors";
+    "w-full min-w-0 px-4 py-2.5 rounded-lg bg-[rgb(var(--background-secondary))]/80 border border-[rgb(var(--border))]/60 text-sm text-[rgb(var(--foreground))] placeholder:text-[rgb(var(--foreground-muted))]/60 focus:outline-none focus:border-[rgb(var(--primary))]/60 focus:ring-1 focus:ring-[rgb(var(--primary))]/40 transition-colors";
 const labelClass =
     "block text-sm font-medium text-[rgb(var(--foreground))] mb-1.5";
 
@@ -86,7 +86,7 @@ export function AssessmentForm() {
         ) : null;
 
     return (
-        <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-6 md:p-8 space-y-5" noValidate>
+        <form onSubmit={handleSubmit} className="glass-card rounded-2xl p-6 md:p-8 space-y-5 min-w-0" noValidate>
             <div className="grid sm:grid-cols-2 gap-5">
                 <div>
                     <label htmlFor="fullName" className={labelClass}>Full name *</label>
