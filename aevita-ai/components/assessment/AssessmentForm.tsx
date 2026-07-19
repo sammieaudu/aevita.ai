@@ -69,11 +69,7 @@ export function AssessmentForm() {
                     directly.
                 </p>
                 <Button size="lg" asChild>
-                    <Link
-                        href="/contact"
-                        data-cal-link={site.scheduling.calLink}
-                        data-cal-config='{"layout":"month_view"}'
-                    >
+                    <Link href="/book">
                         Book a time now
                         <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" />
                     </Link>

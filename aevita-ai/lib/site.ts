@@ -92,6 +92,7 @@ export const site = {
             { name: "Documentation", href: "/docs" },
             { name: "Pricing", href: "/pricing" },
             { name: "Book an Assessment", href: "/assessment" },
+            { name: "Book a Call", href: "/book" },
         ],
         Legal: [
             { name: "Terms of Service", href: "/terms" },
