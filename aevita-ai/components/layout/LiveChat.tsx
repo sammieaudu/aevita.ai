@@ -116,7 +116,7 @@ export function LiveChat() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
-                        className="fixed bottom-24 right-6 z-50 w-[360px] h-[500px] bg-[rgb(var(--background-secondary))] border border-[rgb(var(--border))]/50 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
+                        className="fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] max-w-[360px] h-[500px] max-h-[calc(100dvh-8rem)] bg-[rgb(var(--background-secondary))] border border-[rgb(var(--border))]/50 rounded-2xl shadow-2xl overflow-hidden flex flex-col"
                     >
                         {/* Header */}
                         <div className="p-4 bg-[rgb(var(--primary))] text-white flex items-center gap-3">

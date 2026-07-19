@@ -1,9 +1,18 @@
 
+import type { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { Search, FileText } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { docsCategories } from "@/lib/data";
+import { absoluteUrl } from "@/lib/site";
+
+export const metadata: Metadata = {
+    title: "Documentation",
+    description:
+        "Guides, tutorials, and reference material for working with Aevita's AI agents, automation workflows, and enterprise integrations.",
+    alternates: { canonical: absoluteUrl("/docs") },
+};
 
 export default function DocumentationPage() {
     return (

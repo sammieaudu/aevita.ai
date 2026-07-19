@@ -1,15 +1,38 @@
 
+import type { Metadata } from "next";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle2 } from "lucide-react";
 import { projects } from "@/lib/data";
 import { notFound } from "next/navigation";
+import { absoluteUrl } from "@/lib/site";
 
 export function generateStaticParams() {
     return projects.map((project) => ({
         slug: project.slug,
     }));
+}
+
+export async function generateMetadata({
+    params,
+}: {
+    params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+    const { slug } = await params;
+    const project = projects.find((p) => p.slug === slug);
+    if (!project) return {};
+
+    return {
+        title: `${project.title} — Case Study`,
+        description: project.description,
+        alternates: { canonical: absoluteUrl(`/portfolio/${project.slug}`) },
+        openGraph: {
+            title: `${project.title} — Case Study`,
+            description: project.description,
+            url: absoluteUrl(`/portfolio/${project.slug}`),
+        },
+    };
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {

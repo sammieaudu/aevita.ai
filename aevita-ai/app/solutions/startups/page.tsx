@@ -11,11 +11,13 @@ import {
     Users,
     Clock,
 } from "lucide-react";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "For Startups",
     description:
         "Enterprise-grade AI engineering and automation at startup-friendly scope. Move fast without breaking things.",
+    alternates: { canonical: absoluteUrl("/solutions/startups") },
 };
 
 const benefits = [

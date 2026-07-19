@@ -11,11 +11,13 @@ import {
     Users,
     Headphones,
 } from "lucide-react";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "For Enterprise",
     description:
         "Transform at scale with minimal disruption. Enterprise-grade AI systems with security, governance, and human control built in.",
+    alternates: { canonical: absoluteUrl("/solutions/enterprise") },
 };
 
 const benefits = [

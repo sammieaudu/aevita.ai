@@ -3,11 +3,13 @@ import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Check, ArrowRight } from "lucide-react";
+import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
     title: "Pricing",
     description:
         "Transparent engagement pricing for AI engineering, intelligent automation, and enterprise integration work.",
+    alternates: { canonical: absoluteUrl("/pricing") },
 };
 
 const plans = [
