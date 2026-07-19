@@ -101,6 +101,9 @@ export default function AboutPage() {
                         The engineering partner for{" "}
                         <span className="text-gradient">intelligent operations</span>
                     </h1>
+                    <p className="text-lg md:text-xl font-medium text-[rgb(var(--foreground))] max-w-2xl mx-auto mb-4">
+                        {site.missionTagline}
+                    </p>
                     <p className="text-xl text-[rgb(var(--foreground-muted))] max-w-2xl mx-auto">
                         {site.displayName} designs and builds AI agents, autonomous
                         workflows, generative AI applications, and enterprise integrations

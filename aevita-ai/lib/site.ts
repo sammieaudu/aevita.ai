@@ -12,6 +12,8 @@ export const site = {
     legalName: "Aevita AI, Inc.",
     domain: "https://aevita.ai",
     tagline: "Your AI Automation Partner for Everyday Business Operations",
+    missionTagline:
+        "Bringing businesses into a new era through intelligent automation.",
     description:
         "Aevita helps small and medium-sized businesses identify, build, and manage AI-powered workflows that save time, reduce costs, improve customer experiences, and help teams grow without adding unnecessary overhead.",
     foundedYear: 2023,

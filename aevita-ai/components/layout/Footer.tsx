@@ -19,6 +19,9 @@ export function Footer() {
                         <Link href="/" className="inline-flex items-center mb-3 rounded-lg" aria-label={`${site.displayName} — home`}>
                             <Logo variant="full" theme="dark" width={30} />
                         </Link>
+                        <p className="text-foreground/90 text-xs md:text-sm font-medium max-w-xs mb-2">
+                            {site.missionTagline}
+                        </p>
                         <p className="text-muted-foreground text-xs md:text-sm max-w-xs mb-4">
                             {site.name} designs and builds AI agents, autonomous workflows,
                             and enterprise integrations that turn disconnected operations
