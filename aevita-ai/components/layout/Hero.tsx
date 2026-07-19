@@ -5,7 +5,6 @@ import { ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { EtheralShadow } from "@/components/ui/etheral-shadow";
-import { HeroVisual } from "@/components/sections/HeroVisual";
 import { site } from "@/lib/site";
 
 export function Hero() {
@@ -20,7 +19,7 @@ export function Hero() {
               };
 
     return (
-        <section className="relative min-h-[90vh] md:min-h-screen flex items-center justify-center pt-20 md:pt-24 pb-12 overflow-hidden">
+        <section className="relative flex items-center justify-center pt-32 md:pt-44 pb-16 md:pb-24 overflow-hidden">
             {/* Ethereal Shadow animated background — the preserved Getbeta.ai atmosphere */}
             <div className="absolute inset-0 z-0">
                 <EtheralShadow
@@ -99,19 +98,6 @@ export function Hero() {
                     opportunities for your business.
                 </motion.p>
 
-                {/* Workflow visualization */}
-                <motion.div
-                    {...(shouldReduceMotion
-                        ? {}
-                        : {
-                              initial: { opacity: 0, y: 28 },
-                              animate: { opacity: 1, y: 0 },
-                              transition: { duration: 0.6, delay: 0.3 },
-                          })}
-                    className="mt-10 md:mt-14 w-full flex justify-center"
-                >
-                    <HeroVisual />
-                </motion.div>
             </div>
         </section>
     );
